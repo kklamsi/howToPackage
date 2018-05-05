@@ -30,7 +30,8 @@ Why would we need our own package?
 - Standardised conventions lead to standardised tools - if you buy into R’s package conventions, you get many tools for free.
 - Also share code in a convinient way - (b2b, via github, …)
 
-```{r, eval=FALSE, include=T}
+
+```r
 “Seriously, it doesn’t have to be about sharing your code (although that is an added benefit!). It is about saving yourself time.” Parker (2014)
 ```
 
@@ -50,7 +51,8 @@ Why use Git + GitHub?
 - It makes sharing your package easy. Any R user can install your package with just two lines of code:
 
 
-```{r, eval=FALSE, include=T}
+
+```r
 install.packages("devtools")
 devtools::install_github("username/packagename")
 ```
