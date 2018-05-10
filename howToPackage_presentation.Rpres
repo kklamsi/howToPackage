@@ -1,7 +1,7 @@
 Packages
 ========================================================
-author: X
-date: 2018-04-30
+author: Moritz Friedrich, Klemens Kurtz
+date: 2018-05-14
 autosize: true
 font-family: 'Trebuchet MS'
 
@@ -19,6 +19,17 @@ Packages?
 <div style="text-align:center;"><img src="packageNumber.png"; width=1100 height=550 pos=>
 
 (revolutionanalytics.com, 2017)
+
+
+Packages?
+========================================================
+
+A bundle of functions, data sets and help pages that you install in addition to the base R installation.
+
+
+<div style="text-align:center;"><img src="packageSummary.png"; width=1100 height=550 pos=>
+
+(R-Studio)
 
 
 Why would we need our own package?
@@ -70,7 +81,7 @@ Submit a package to CRAN
 6. Prepare for the next version by updating version numbers.
 7. Publicise the new version.
 
-- typical over a 100 submissions a week and only three volunteers to process them.
+- typical over a 100 submissions a week and only a few volunteers to process them.
 
 
 Agenda for today???
