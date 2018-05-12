@@ -14,9 +14,7 @@ Packages?
 - Somebody might have solved your problem.
 - https://cran.r-project.org/
 
-
-
-<div style="text-align:center;"><img src="packageNumber.png"; width=1100 height=550 pos=>
+<div style="text-align:center;"><img src="packageNumber.png"; width=700 height=400 pos=>
 
 (revolutionanalytics.com, 2017)
 
@@ -46,20 +44,26 @@ Why would we need our own package?
 ```
 
 
-devtools, Git and GitHub
+devtools
 ========================================================
 
 devtools:
+
 - devtools package: a suite of R functions to automate common development tasks.
+
 - devtools protects you from many potential mistakes, so you can focus on the problem you're interested in, not on developing a package.
 
+- Cheatsheet: R-Studio > Help > Cheatsheets > Package Development with devtools
+
+
 Git and GitHub
+========================================================
+
 - Git is a version control system, a tool that tracks changes to your code and shares those changes with others.
 - Git is most useful when combined with GitHub, a website that allows you to share your code with the world.
 
 Why use Git + GitHub?
 - It makes sharing your package easy. Any R user can install your package with just two lines of code:
-
 
 ```{r, eval=FALSE, include=T}
 install.packages("devtools")
@@ -88,7 +92,7 @@ Package directories
 ========================================================
 A package is a convention for organizing files into directories.
 
-<div style="text-align:center;"><img src="packageDirectory.PNG"; width=1300 height=700 pos=>
+<div style="text-align:center;"><img src="packageDirectory.PNG"; width=1200 height=600 pos=>
 
 
 Necessary packages:
@@ -109,4 +113,6 @@ Resources
 - R-Studio > Help > Cheatsheets > Package Development with devtools
 - Parker (2014): https://hilaryparker.com/2014/04/29/writing-an-r-package-from-scratch/
 - CRAN - Creating R packages: https://cran.r-project.org/doc/manuals/R-exts.html#Creating-R-packages
+
+- Our slides: https://github.com/kklamsi/howToPackage
 
