@@ -27,7 +27,7 @@ Packages?
 A bundle of functions, data sets and help pages that you install in addition to the base R installation.
 
 
-<div style="text-align:center;"><img src="packageSummary.png"; width=1100 height=550 pos=>
+<div style="text-align:center;"><img src="packageSummary.PNG"; width=1100 height=550 pos=>
 
 (R-Studio)
 
@@ -88,7 +88,16 @@ Package directories
 ========================================================
 A package is a convention for organizing files into directories.
 
-<div style="text-align:center;"><img src="packageDirectory.png"; width=1300 height=700 pos=>
+<div style="text-align:center;"><img src="packageDirectory.PNG"; width=1300 height=700 pos=>
+
+
+Necessary packages:
+========================================================
+```{r, eval=FALSE, include=T}
+install.packages("devtools")
+install.packages("roxygen2")
+install.packages("testthat")
+```
 
 
 Resources
