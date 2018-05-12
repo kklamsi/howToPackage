@@ -2,18 +2,13 @@
 % Please edit documentation in R/firstFunction.R
 \name{secondFunction}
 \alias{secondFunction}
-\title{secondFunction}
+\title{Title}
 \usage{
 secondFunction(x, y)
 }
 \arguments{
-\item{x}{a sclar}
-
-\item{y}{a scalar}
-}
-\value{
-the product ot two inputs
+\item{y}{}
 }
 \description{
-builds the product of two inputs
+Title
 }

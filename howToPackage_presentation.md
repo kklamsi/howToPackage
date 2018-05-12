@@ -86,17 +86,11 @@ Submit a package to CRAN
 - typical over a 100 submissions a week and only a few volunteers to process them.
 
 
-Agenda for today???
+Package directories
 ========================================================
-- Code (R/)
-- Package metadata (DESCRIPTION)
-- Object documentation (man/)
-- Vignettes (vignettes/)
-- Testing (tests/)
-- Namespaces (NAMESPACE)
-- Data (data/)
-- Compiled code (src/)
-- Installed files (inst/)
+A package is a convention for organizing files into directories.
+
+<div style="text-align:center;"><img src="packageDirectory.png"; width=1300 height=700 pos=>
 
 
 Resources
