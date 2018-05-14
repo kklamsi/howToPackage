@@ -6,11 +6,6 @@ autosize: true
 font-family: 'Trebuchet MS'
 
 
-test?
-========================================================
-test
--test2
-
 Packages?
 ========================================================
 
@@ -113,6 +108,85 @@ install.packages("testthat")
 ```
 
 
+Description
+========================================================
+- specifies title, author, maintainer, version, ...
+- the package information you see on CRAN
+- more important if you publish it
+- necessary
+- also specifies the packages you need and downloads them
+
+
+
+Description - other packages you need
+========================================================
+```r
+Imports:  
+    dplyr (>= 0.4.0), 
+    ggvis (>= 0.2) 
+Suggests: 
+    knitr (>= 0.1.0)
+```
+- imports are necessary for your package to work
+- they are installed together with the package
+- suggests are useful, but not necessary
+- they are not automatically installed
+- good practice to specify a minimal version
+- add imports with devtools::use_package("packagename") or manually
+- you still have to use library("packagename") in your code
+
+
+Documentation with roxygen2
+========================================================
+- with roxygen2, you can put the documentation/help page directly in the code files
+- R-Studio > Help > Roxygen Quick Reference
+```r
+#' Add together two numbers. 
+#'  
+#' @param x A number. 
+#' @param y A number. 
+#' @return The sum of \code{x} and \code{y}. 
+#' @examples 
+#' add(1, 1)
+#' @export
+```
+
+
+roxygen2 - important tags
+========================================================
+- first line is the heading in the help page
+- second paragraph is description
+- @param x description - Arguments in help file
+- @return sentence - Value in help file
+- @examples put examples below
+- @source data
+- @export makes the function available for users (important!)
+
+
+Exercise
+========================================================
+- download our second dataset
+- write a function with roxygen documentation that uses the dataset
+
+
+Vignettes
+========================================================
+- vignettes are for teaching/more detailed documentation
+- a markdown file (.rmd) with a YAML header
+- example: ggplot2
+- make a template file with: devtools::use_vignette("my_vignette")
+- we won't go in detail here
+- good resource: Markdown cheat sheet https://www.rstudio.com/wp-content/uploads/2015/02/rmarkdown-cheatsheet.pdf
+
+
+Tests
+========================================================
+- make sure you code still works after changes
+- initialize with devtools::use_testthat()
+- put your tests (R-files starting with "test" in the name) in tests/testthat/
+- run them all with devtools::test()
+
+
 Resources
 ========================================================
 - R Packages (Wickham, 2015): https://r-pkgs.had.co.nz
@@ -124,5 +198,16 @@ Resources
 - CRAN - Creating R packages: https://cran.r-project.org/doc/manuals/R-exts.html#Creating-R-packages
 
 - Our slides: https://github.com/kklamsi/howToPackage
+
+
+Excercise
+========================================================
+Make a complete package containing the following:
+- 2+ functions with documentation
+- altered description
+- our 2 datasets
+- use another package in your package
+- a test (optional)
+- a vignette (optional)
 
 
