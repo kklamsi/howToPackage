@@ -97,14 +97,109 @@ A package is a convention for organizing files into directories.
 <div style="text-align:center;"><img src="packageDirectory.PNG"; width=1200 height=600 pos=>
 
 
-Necessary packages:
+Necessary packages & tools:
 ========================================================
 
 ```r
-install.packages("devtools")
-install.packages("roxygen2")
-install.packages("testthat")
+install.packages(c("devtools", "roxygen2", "testthat", "knitr"))
+
+# Check:
+#install.packages("rstudioapi")
+rstudioapi::isAvailable("0.99.149") # TRUE?
 ```
+
+You’ll also need a C compiler and a few other command line tools. If you’re on Windows or Mac and you don’t already have them, RStudio will install them for you. Otherwise:
+
+- On Windows, download and install Rtools. NB: this is not an R package!
+- On Mac, make sure you have either XCode (available for free in the App Store) or the “Command Line Tools for Xcode”. You’ll need to have a (free) Apple ID.
+- On Linux, make sure you’ve installed not only R, but also the R development tools. For example, on Ubuntu (and Debian) you need to install the r-base-dev package.
+
+
+Description
+========================================================
+
+- specifies title, author, maintainer, version, ...
+- the package information you see on CRAN
+- more important if you publish it
+- necessary
+- also specifies the packages you need and downloads them
+
+
+Description - other packages you need
+========================================================
+
+```r
+Imports:
+    dplyr (>= 0.4.0),
+    ggvis (>= 0.2)
+Suggests:
+    knitr (>= 0.1.0)
+```
+
+- imports are necessary for your package to work
+- they are installed together with the package
+- suggests are useful, but not necessary
+- they are not automatically installed
+- good practice to specify a minimal version
+- add imports with devtools::use_package("packagename") or manually
+- you still have to use library("packagename") in your code
+
+
+Documentation with roxygen2
+========================================================
+
+- with roxygen2, you can put the documentation/help page directly in the code files
+- R-Studio > Help > Roxygen Quick Reference
+
+```r
+#' Add together two numbers.
+#'
+#' @param x A number.
+#' @param y A number.
+#' @return The sum of \code{x} and \code{y}.
+#' @examples
+#' add(1, 1)
+#' @export
+```
+
+
+roxygen2 - important tags
+========================================================
+
+- first line is the heading in the help page
+- second paragraph is description
+- @param x description - Arguments in help file
+- @return sentence - Value in help file
+- @examples put examples below
+- @source data
+- @export makes the function available for users (important!)
+
+
+Exercise
+========================================================
+
+- download our second dataset
+- write a function with roxygen documentation that uses the dataset
+
+
+Vignettes
+========================================================
+
+- vignettes are for teaching/more detailed documentation
+- a markdown file (.rmd) with a YAML header
+- example: ggplot2
+- make a template file with: devtools::use_vignette("my_vignette")
+- we won't go in detail here
+- good resource: Markdown cheat sheet https://www.rstudio.com/wp-content/uploads/2015/02/rmarkdown-cheatsheet.pdf
+
+
+Tests
+========================================================
+
+- make sure you code still works after changes
+- initialize with devtools::use_testthat()
+- put your tests (R-files starting with "test" in the name) in tests/testthat/
+- run them all with devtools::test()
 
 
 Resources
