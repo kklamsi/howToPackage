@@ -16,7 +16,7 @@ Packages?
 
 <div style="text-align:center;"><img src="packageNumber.png"; width=700 height=400 pos=>
 
-(revolutionanalytics.com, 2017)
+Source: revolutionanalytics.com (2017)
 
 
 Packages?
@@ -27,7 +27,7 @@ A bundle of functions, data sets and help pages that you install in addition to 
 
 <div style="text-align:center;"><img src="packageSummary.PNG"; width=1100 height=550 pos=>
 
-(R-Studio)
+Source: R-Studio
 
 
 Why would we need our own package?
@@ -44,6 +44,7 @@ Why would we need our own package?
 “Seriously, it doesn’t have to be about sharing your code (although that is an added benefit!). It is about saving yourself time.” Parker (2014)
 ```
 
+Source: Wickham (2015)
 
 devtools
 ========================================================
@@ -56,6 +57,7 @@ devtools:
 
 - Cheatsheet: R-Studio > Help > Cheatsheets > Package Development with devtools
 
+Source: Wickham (2015)
 
 Git and GitHub
 ========================================================
@@ -71,6 +73,8 @@ Why use Git + GitHub?
 install.packages("devtools")
 devtools::install_github("username/packagename")
 ```
+
+Source: Wickham (2015)
 
 
 Submit a package to CRAN
@@ -89,6 +93,7 @@ Submit a package to CRAN
 
 - typical over a 100 submissions a week and only a few volunteers to process them.
 
+Source: Wickham (2015), CRAN
 
 Package directories
 ========================================================
@@ -96,6 +101,7 @@ A package is a convention for organizing files into directories.
 
 <div style="text-align:center;"><img src="packageDirectory.PNG"; width=1200 height=600 pos=>
 
+Source: Wickham (2015), R-Studio
 
 Necessary packages & tools:
 ========================================================
@@ -115,6 +121,9 @@ You’ll also need a C compiler and a few other command line tools. If you’re 
 - On Linux, make sure you’ve installed not only R, but also the R development tools. For example, on Ubuntu (and Debian) you need to install the r-base-dev package.
 
 
+Source: Wickham (2015)
+
+
 Description
 ========================================================
 
@@ -123,6 +132,8 @@ Description
 - more important if you publish it
 - necessary
 - also specifies the packages you need and downloads them
+
+Source: Wickham (2015)
 
 
 Description - other packages you need
@@ -144,6 +155,8 @@ Suggests:
 - add imports with devtools::use_package("packagename") or manually
 - you still have to use library("packagename") in your code
 
+Source: Wickham (2015)
+
 
 Documentation with roxygen2
 ========================================================
@@ -162,6 +175,8 @@ Documentation with roxygen2
 #' @export
 ```
 
+Source: Wickham (2015)
+
 
 roxygen2 - important tags
 ========================================================
@@ -173,6 +188,8 @@ roxygen2 - important tags
 - @examples put examples below
 - @source data
 - @export makes the function available for users (important!)
+
+Source: Wickham (2015)
 
 
 Exercise
@@ -192,6 +209,8 @@ Vignettes
 - we won't go in detail here
 - good resource: Markdown cheat sheet https://www.rstudio.com/wp-content/uploads/2015/02/rmarkdown-cheatsheet.pdf
 
+Source: Wickham (2015)
+
 
 Tests
 ========================================================
@@ -200,6 +219,8 @@ Tests
 - initialize with devtools::use_testthat()
 - put your tests (R-files starting with "test" in the name) in tests/testthat/
 - run them all with devtools::test()
+
+Source: Wickham (2015)
 
 
 Resources
